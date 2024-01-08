@@ -60,7 +60,7 @@ export const Home = () => {
             <Pagination
               defaultCurrent={1}
               total={allPost?.length}
-              pageSize={pageSize}
+              
               currentPage={currentPage}
               onChange={onShowSizeChange}
             />

@@ -18,8 +18,8 @@ export const DisplayCard = ({data}) => {
         <Avatar icon={<UserOutlined/>}/>
       </div>
       <div className="common-col a-start">
-        <h4 className="m-zero text-left">{truncateStr(title,50)}....</h4>
-        <p className="m-zero text-left">{truncateStr(body,100)}....</p>
+        <h4 className="m-zero text-left pd-xs">{truncateStr(title,50)}....</h4>
+        <p className="m-zero text-left pd-xs" >{truncateStr(body,100)}....</p>
        
       </div>
       <div>
