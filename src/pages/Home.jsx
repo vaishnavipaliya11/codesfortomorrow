@@ -22,8 +22,13 @@ export const Home = () => {
   const renderPost = allPost?.slice(start, end);
   console.log(renderPost, "renderPost");
   useEffect(() => {
-    dispatch(getPost());
-  }, []);
+    try {
+      dispatch(getPost());
+    } catch (error) {
+      console.log(error);
+    }
+  }, [dispatch]);
+
   return (
     <div className="home-layout">
       {postLoading ? (
@@ -34,7 +39,13 @@ export const Home = () => {
         <>
           <SideBar />
 
-          <div className={isCardHorizontal ? "horizontal-card-layout" : "vertical-card-layout"}>
+          <div
+            className={
+              isCardHorizontal
+                ? "horizontal-card-layout"
+                : "vertical-card-layout"
+            }
+          >
             {renderPost?.map((data) => {
               return (
                 <>
