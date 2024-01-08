@@ -23,7 +23,9 @@ export const FeedBackModal = () => {
     </Form.Item>
   );
   return (
-    <Modal open={isModalOpen} onCancel={handleCancel}>
+    <Modal open={isModalOpen} onCancel={handleCancel}
+    okButtonProps={{ style: { display: 'none' } }}
+    cancelButtonProps={{ style: { display: 'none' } }}>
       <h4>We appreciate your feedBack</h4>
       <div>
         <Form
@@ -66,7 +68,7 @@ export const FeedBackModal = () => {
           </Form.Item>
           <Form.Item
             name="phone"
-            label="Phone Number"
+            label="Mobile"
             rules={[
               { required: true, message: "Please input your phone number!" },
             ]}

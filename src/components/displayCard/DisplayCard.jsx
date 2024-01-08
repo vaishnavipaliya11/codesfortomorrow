@@ -13,7 +13,7 @@ export const DisplayCard = ({data}) => {
      return str.slice(0,char)
     }
   return (
-    <div className="common-flex a-start card-container gap-sm">
+    <div className="common-flex a-start card-container gap-sm pd-sm">
       <div>
         <Avatar icon={<UserOutlined/>}/>
       </div>
